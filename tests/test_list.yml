@@ -1,0 +1,42 @@
+entries:
+- name: valid_entry
+  type: app
+  category: valid_entry
+  url: https://valid_url.io/
+  description: |-
+    A valid entry
+- name: invalid_entry_1
+  tyep: app
+  category: some category
+  url: https://valid_url.io/
+  description: |-
+    Incorrect schema attribute defined.
+- name: invalid_entry_2
+  type: app
+  category: some category
+  url:
+  description: |-
+    Missing attribute value
+- name: invalid_entry_3
+  type: app
+  category: some category
+  url: https://valid_url.io/
+  url2: https://valid_url2.io/
+  description: |-
+    additional attribute value
+- name: invalid_entry_4
+  type: app
+  category: some category
+  url: https://invalid url.io/
+  description: |-
+    invalid url attribute value
+- name: invalid_entry_5
+  type: app
+  category: some category
+  url: https://valid_url.io/
+  description: |-
+    Invalid additional links
+  links:
+    - name: link1 with invalid url
+      url: https://invalid additional url.io/
+  examples: []

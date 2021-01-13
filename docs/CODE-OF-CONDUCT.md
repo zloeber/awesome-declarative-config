@@ -1,0 +1,1 @@
+/home/zloeber/Projects/Personal/awesome-declarative-apps/CODE-OF-CONDUCT.md

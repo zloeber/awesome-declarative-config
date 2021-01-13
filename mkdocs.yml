@@ -1,0 +1,37 @@
+site_name: Awesome Declarative
+site_description: A curated list of awesome declarative applications and engines.
+site_author: Zachary Loeber
+repo_name: zloeber/awesome-declarative
+repo_url: https://www.github.com/zloeber/awesome-declarative
+markdown_extensions:
+    - toc:
+        permalink: True
+    - sane_lists
+    - smarty
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+extra_css:
+  - https://unpkg.com/mermaid@8.8.4/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
+theme:
+  name: material
+  palette:
+    scheme: default
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/zloeber
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/zloeber
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/zloeber
+nav:
+  - Home: README.md
+  - The List: LIST.md
+  - Contributing: CONTRIBUTING.md
+  - Code of Conduct: CODE-OF-CONDUCT.md
