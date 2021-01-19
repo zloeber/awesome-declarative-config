@@ -28,8 +28,8 @@ mdtoc := $(LOCAL_BIN_PATH)/mdtoc
 help: ## This help
 	@grep --no-filename -E '^[a-zA-Z_/-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: deploy
-deploy:
+.PHONY: publish
+publish: ## Publish to github pages
 	$(mkdocs) gh-deploy --clean
 
 .PHONY: lint
@@ -47,12 +47,12 @@ link: ## Link README.MD to docs folder
 	ln -sf $(ROOT_PATH)/CODE-OF-CONDUCT.md $(ROOT_PATH)/docs/CODE-OF-CONDUCT.md
 
 .PHONY: serve
-serve: link ## Run local webserver to preview the site
+serve: link toc ## Run local webserver to preview the site
 	$(mkdocs) serve
 
 .PHONY: build
-build: link ## Build the site 
-	$(mkdocs) build
+build: link toc ## Build the site 
+	@$(mkdocs) build
 
 .PHONY: show
 show: ## Shows some settings
@@ -103,7 +103,7 @@ venv:  ## Configure python virtual environment
 
 .PHONY: toc
 toc: .dep/mdtoc ## Update README.MD TOC
-	$(LOCAL_BIN_PATH)/mdtoc -inplace README.md
+	@$(LOCAL_BIN_PATH)/mdtoc -inplace README.md
 
 # .PHONY: diagrams
 # diagrams: ## Create diagrams with pandoc

@@ -1,6 +1,18 @@
 An awesome list of declaratively configured applications and engines.
 
 <!-- toc -->
+  - [Introduction](#introduction)
+- [Understanding Declarative Configuration](#understanding-declarative-configuration)
+  - [Benefits](#benefits)
+  - [Drawbacks](#drawbacks)
+  - [Declarative Categories](#declarative-categories)
+  - [Qualifying For This List](#qualifying-for-this-list)
+  - [What Does Not Qualify](#what-does-not-qualify)
+- [<a href="LIST.md">The List</a>](#the-list)
+- [Contribute](#contribute)
+- [Links](#links)
+- [Resources](#resources)
+- [Badges](#badges)
 <!-- /toc -->
 
 ## Introduction
