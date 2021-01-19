@@ -29,7 +29,7 @@ help: ## This help
 	@grep --no-filename -E '^[a-zA-Z_/-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: publish
-publish: ## Publish to github pages
+publish: build ## Publish to github pages
 	$(mkdocs) gh-deploy --clean
 
 .PHONY: lint
