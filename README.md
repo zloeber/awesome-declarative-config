@@ -1,5 +1,8 @@
 An awesome list of declaratively configured applications and engines.
 
+<!-- toc -->
+<!-- /toc -->
+
 ## Introduction
 
 This is a list of awesome application which qualify as being declaratively configured. To understand what qualifies for this list, it is important to understand what declarative actually means. Declarative programming [as defined in wikipedia](https://en.wikipedia.org/wiki/Declarative_programming) is; 
@@ -8,34 +11,27 @@ This is a list of awesome application which qualify as being declaratively confi
 
 An operator can declare what they want and the app makes it a reality by handling all the gritty details. Truly declarative languages that must figure out several interdependencies in the correct order in a repeatable manner will often employ graph theory such as [direct acycle graphs(DAGS)](https://en.wikipedia.org/wiki/Directed_acyclic_graph) to achieve their desired results. For example, a common declarative infrastructure tool known as terraform will use such algorithms along with a separate 'state' to speed up future runs and track the current known state after the declarative manifest has processed. In theory, this allows not only to deploy repeatable infrastructure for IT projects, but also can be used to control configuration drift by making the deployment itself idempotent.
 
-At a high level, a declaratively structured workflow looks pretty simple.
+At a high level, a declaratively structured workflow looks pretty simple. 
 
-```mermaid
-graph LR
-    Manifest[Declarative Manifest (DSL)]
-    Engine[[Declarative Engine]]
-    State[Desired State]
-    Manifest-->|Processed via|Engine
-    Engine-->|Produces|State
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBNYW5pZmVzdFtEZWNsYXJhdGl2ZSBNYW5pZmVzdF1cbiAgICBFbmdpbmVbW0RlY2xhcmF0aXZlIEVuZ2luZV1dXG4gICAgU3RhdGVbRGVzaXJlZCBTdGF0ZV1cbiAgICBNYW5pZmVzdC0tPnxQcm9jZXNzZWQgdmlhfEVuZ2luZVxuICAgIEVuZ2luZS0tPnxQcm9kdWNlc3xTdGF0ZVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBNYW5pZmVzdFtEZWNsYXJhdGl2ZSBNYW5pZmVzdF1cbiAgICBFbmdpbmVbW0RlY2xhcmF0aXZlIEVuZ2luZV1dXG4gICAgU3RhdGVbRGVzaXJlZCBTdGF0ZV1cbiAgICBNYW5pZmVzdC0tPnxQcm9jZXNzZWQgdmlhfEVuZ2luZVxuICAgIEVuZ2luZS0tPnxQcm9kdWNlc3xTdGF0ZVxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
 
 The declarative engine is an abstraction layer that produces a desired end state from an input manifest written in a Domain Specific Language (DSL). This is a simple but powerful approach to application configuration and deployment workflows.
 
 # Understanding Declarative Configuration
 
-The next few sections will provide a foundation of knowledge about declarative processing that should help to solidify ones understanding of the topic.
+The next few sections will provide foundational knowledge of declarative configuration.
 
 ## Benefits
 
-Several benefits emerge when using declarative engines to accomplish tasks. Here are a few of them in no particular order.
+Several benefits emerge when using declarative engines to accomplish configuration tasks. Declarative configuration is;
 
-1. Declarative manifests are typically far easier to read and comprehend
-2. Succinctness of configuration
-3. Reusability of configuration
-4. Idempotent configuration is typically baked in
-5. Configuration drift can be more easily prevented
-6. Configuration as code becomes far easier to accomplish (and by natural extension, GitOps becomes attainable)
-7. Codebase is naturally self-documenting in most cases
+1. Human readable
+2. Typically succinct
+3. Reusable
+4. Idempotent
+5. Naturally resistent to configuration skew/drift
+6. Easy to check into version control
+7. Is often naturally self-documenting
 
 ## Drawbacks
 
@@ -48,19 +44,15 @@ There are drawbacks to this model as well. A few of these in no particular order
 
 These drawbacks typically emerge in more complex declarative configurations.
 
-## Personal Opinion 
-
-It is the author's belief that the evolution of information technology is driven forward by widespread adoption. In order to adopt technology it must first be consumable. In order to be consumable it must be approachable and easier to use. As we have evolved our ability to create human consumable GUIs for the masses there has also been an evolution in backend orchestration required to operate the ever growing piles of technology required to serve them. The declarative configuration of all things has become much plausible with the advent of container orchestration (Kubernetes) in our industry.
-
 ## Declarative Categories
 
 Three broad categories of software will be considered for this list. The difference between them is a bit fuzzy but largely comes down to the target of the declarative manifests it consumes. Categories are as follows:
 
-1. **Engine** - Engines consume declarative manifests in some manner to simplify the attainment of desired state of a broad range of systems outside of the application itself. A prime example of a declarative engine would be Terraform.
+1. **Engines** - Engines consume declarative manifests in some manner to simplify the attainment of desired state of a broad range of systems outside of the application itself. A prime example of a declarative engine would be Terraform.
 
-2. **Application** - An application which is able to be configured declaratively or uses declarative manifests to accomplish application specific tasks. One example of a declarative application would be a Kubernetes operator.
+2. **Applications** - An application which is able to be configured declaratively or uses declarative manifests to accomplish application specific tasks. One example of a declarative application would be a Kubernetes operator.
 
-3. **Platform** - A platform which consumes declarative manifests to configure or deploy platform specific elements. A great example of a declarative platform would be Kubernetes.
+3. **Platforms** - A platform which consumes declarative manifests to configure or deploy platform specific elements. A great example of a declarative platform would be Kubernetes.
 
 ## Qualifying For This List
 
@@ -84,6 +76,10 @@ The list can be viewed [here](LIST.md) or the entire document can be viewed in i
 # Contribute
 
 Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
+
+# Links
+
+- [Mermaid.js online editor](https://mermaid-js.github.io/mermaid-live-editor)
 
 # Resources
 

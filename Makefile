@@ -21,6 +21,8 @@ endif
 
 mkdocs := $(PYTHON_VENV_PATH)/bin/mkdocs
 cue := $(LOCAL_BIN_PATH)/cue
+pandoc := $(LOCAL_BIN_PATH)/pandoc
+mdtoc := $(LOCAL_BIN_PATH)/mdtoc
 
 .PHONY: help
 help: ## This help
@@ -60,7 +62,7 @@ show: ## Shows some settings
 	@echo "$(BOLD)ENTRY_SCHEMA$(RESET): $(ENTRY_SCHEMA)"
 
 .PHONY: deps
-deps: venv .dep/githubapps .dep/cue ## install dependencies
+deps: venv .dep/githubapps .dep/cue .dep/pandoc .dep/mdtoc ## install dependencies
 
 .PHONY: .dep/githubapps
 .dep/githubapps: ## Install githubapp (ghr-installer)
@@ -70,10 +72,25 @@ ifeq (,$(wildcard $(APP_PATH)/githubapp))
 	@git clone https://github.com/zloeber/ghr-installer $(APP_PATH)/githubapp
 endif
 
+.PHONY: .dep/mdtoc
+.dep/mdtoc:
+ifeq (,$(wildcard $(mdtoc)))
+	@wget https://github.com/kubernetes-sigs/mdtoc/releases/download/v1.0.0/mdtoc -O $(LOCAL_BIN_PATH)/mdtoc
+	@chmod +x $(LOCAL_BIN_PATH)/mdtoc
+	@echo "Installed: $(mdtoc)"
+endif
+
 .PHONY: .dep/cue
 .dep/cue:
 ifeq (,$(wildcard $(cue)))
 	@$(MAKE) --no-print-directory -C $(APP_PATH)/githubapp auto cuelang/cue INSTALL_PATH=$(LOCAL_BIN_PATH)
+	@echo "Installed: $(cue)"
+endif
+
+.PHONY: .dep/pandoc
+.dep/pandoc:
+ifeq (,$(wildcard $(pandoc)))
+	@$(MAKE) --no-print-directory -C $(APP_PATH)/githubapp auto pandoc/pandoc INSTALL_PATH=$(LOCAL_BIN_PATH)
 	@echo "Installed: $(cue)"
 endif
 
@@ -83,3 +100,15 @@ venv:  ## Configure python virtual environment
 	source $(PYTHON_VENV_PATH)/bin/activate && \
 		$(PYTHON_VENV_PATH)/bin/pip3 install --quiet pip wheel --upgrade --index-url=https://pypi.org/simple/ && \
 		$(PYTHON_VENV_PATH)/bin/pip3 install --quiet -r $(ROOT_PATH)/requirements.txt
+
+.PHONY: toc
+toc: .dep/mdtoc ## Update README.MD TOC
+	$(LOCAL_BIN_PATH)/mdtoc -inplace README.md
+
+# .PHONY: diagrams
+# diagrams: ## Create diagrams with pandoc
+# 	$(LOCAL_BIN_PATH)/pandoc \
+# 		$(ROOT_PATH)/docs/img/declarative-diagram.md \
+# 		--to png \
+# 		-o $(ROOT_PATH)/docs/img/declarative-diagram.png \
+# 		--filter $(PYTHON_VENV_PATH)/bin/pandoc-mermaid
