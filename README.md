@@ -15,7 +15,7 @@ An awesome list of declaratively configured applications and engines.
 - [Badges](#badges)
 <!-- /toc -->
 
-## Introduction
+# Introduction
 
 This is a list of awesome application which qualify as being declaratively configured. To understand what qualifies for this list, it is important to understand what declarative actually means. Declarative programming [as defined in wikipedia](https://en.wikipedia.org/wiki/Declarative_programming) is; 
 
@@ -81,9 +81,9 @@ We do not include dependency graphing or other more complex mechanisms as a requ
 
 Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned 'charts' that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying application that is not declaratively configured very nicely in the hands of a skilled chart author. These charts are the source manifest for a declarative tool though, As such, individual helm charts are not going to be considered for this list. Rather, helm itself would be on this list as an application.
 
-# [The List](LIST.md)
+# The List
 
-The list can be viewed [here](LIST.md) or the entire document can be viewed in its published form [here](https://)
+The list can be viewed [here](LIST.md) or the entire document can be viewed in its published form [here](https://zloeber.github.io/awesome-declarative-config/)
 
 # Contribute
 
