@@ -292,13 +292,12 @@
 <li><a href="#benefits">Benefits</a></li>
 <li><a href="#drawbacks">Drawbacks</a></li>
 <li><a href="#declarative-categories">Declarative Categories</a></li>
-<li><a href="#qualifying-for-this-list">Qualifying For This List</a></li>
+<li><a href="#declarative-manifests">Declarative Manifests</a></li>
 <li><a href="#what-does-not-qualify">What Does Not Qualify</a></li>
 <li><a href="#the-list">The List</a></li>
 <li><a href="#contribute">Contribute</a></li>
 <li><a href="#links">Links</a></li>
 <li><a href="#resources">Resources</a></li>
-<li><a href="#badges">Badges</a></li>
 </ul>
 <!-- /toc -->
 
@@ -316,13 +315,13 @@
 <h2 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h2>
 <p>Several benefits emerge when using declarative engines to accomplish configuration tasks. Declarative configuration is;</p>
 <ol>
-<li>Human readable</li>
-<li>Typically succinct</li>
-<li>Reusable</li>
+<li>Easier to comprehend</li>
+<li>More succinct</li>
+<li>More reusable</li>
 <li>Idempotent</li>
 <li>Naturally resistent to configuration skew/drift</li>
 <li>Easy to check into version control</li>
-<li>Is often naturally self-documenting</li>
+<li>Is often self-documenting</li>
 </ol>
 <h2 id="drawbacks">Drawbacks<a class="headerlink" href="#drawbacks" title="Permanent link">&para;</a></h2>
 <p>There are drawbacks to this model as well. A few of these in no particular order.</p>
@@ -346,17 +345,16 @@
 <p><strong>Platforms</strong> - A platform which consumes declarative manifests to configure or deploy platform specific elements. A great example of a declarative platform would be Kubernetes.</p>
 </li>
 </ol>
-<h2 id="qualifying-for-this-list">Qualifying For This List<a class="headerlink" href="#qualifying-for-this-list" title="Permanent link">&para;</a></h2>
-<p>The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria;</p>
+<h2 id="declarative-manifests">Declarative Manifests<a class="headerlink" href="#declarative-manifests" title="Permanent link">&para;</a></h2>
+<p>The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria to be on this list;</p>
 <ul>
 <li>Are human readable</li>
 <li>Follow a concrete configuration schema or language definition</li>
-<li>Ideally produces idempotent results when processed </li>
 <li>Present a reduction of overall complexity to the operator</li>
 </ul>
 <p>We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and (the ever loved/hated) yaml are perfectly valid declarative configuration formats on <a href="LIST.md">this list</a>.</p>
 <h2 id="what-does-not-qualify">What Does Not Qualify<a class="headerlink" href="#what-does-not-qualify" title="Permanent link">&para;</a></h2>
-<p>Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned &lsquo;charts&rsquo; that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying application that is not declaratively configured very nicely in the hands of a skilled chart author. These charts are the source manifest for a declarative tool though, As such, individual helm charts are not going to be considered for this list. Rather, helm itself would be on this list as an application.</p>
+<p>Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned &lsquo;charts&rsquo; that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying non-declaratively configured application. These charts are the source manifest for a declarative tool to apply the desired state against a Kubernetes cluster. As such, individual helm charts are not going to be considered for this list but rather, helm itself would be on this list as an application that facilitates declarative configuration.</p>
 <h1 id="the-list">The List<a class="headerlink" href="#the-list" title="Permanent link">&para;</a></h1>
 <p>The list can be viewed <a href="LIST.md">here</a> or the entire document can be viewed in its published form <a href="https://zloeber.github.io/awesome-declarative-config/">here</a></p>
 <h1 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h1>
@@ -370,8 +368,11 @@
 <li><a href="https://blog.nelhage.com/post/declarative-configuration-management/">Declarative configuration management</a></li>
 <li><a href="https://www.toptal.com/software/declarative-programming">Declarative Programming Opinion Article</a></li>
 </ul>
-<h1 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h1>
-<p>awesome-declarative-tools <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg" /></a></p>
+<!-- I've yet to earn this badge :) -->
+<!-- # Badges
+
+awesome-declarative-tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+-->
                 
               
               
