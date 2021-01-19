@@ -6,13 +6,12 @@ An awesome list of declaratively configured applications and engines.
   - [Benefits](#benefits)
   - [Drawbacks](#drawbacks)
   - [Declarative Categories](#declarative-categories)
-  - [Qualifying For This List](#qualifying-for-this-list)
+  - [Declarative Manifests](#declarative-manifests)
   - [What Does Not Qualify](#what-does-not-qualify)
 - [The List](#the-list)
 - [Contribute](#contribute)
 - [Links](#links)
 - [Resources](#resources)
-- [Badges](#badges)
 <!-- /toc -->
 
 # Introduction
@@ -37,13 +36,13 @@ The next few sections will provide foundational knowledge of declarative configu
 
 Several benefits emerge when using declarative engines to accomplish configuration tasks. Declarative configuration is;
 
-1. Human readable
-2. Typically succinct
-3. Reusable
+1. Easier to comprehend
+2. More succinct
+3. More reusable
 4. Idempotent
 5. Naturally resistent to configuration skew/drift
 6. Easy to check into version control
-7. Is often naturally self-documenting
+7. Is often self-documenting
 
 ## Drawbacks
 
@@ -66,20 +65,19 @@ Three broad categories of software will be considered for this list. The differe
 
 3. **Platforms** - A platform which consumes declarative manifests to configure or deploy platform specific elements. A great example of a declarative platform would be Kubernetes.
 
-## Qualifying For This List
+## Declarative Manifests
 
-The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria;
+The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria to be on this list;
 
 * Are human readable
 * Follow a concrete configuration schema or language definition
-* Ideally produces idempotent results when processed 
 * Present a reduction of overall complexity to the operator
 
 We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and (the ever loved/hated) yaml are perfectly valid declarative configuration formats on [this list](LIST.md).
 
 ## What Does Not Qualify
 
-Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned 'charts' that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying application that is not declaratively configured very nicely in the hands of a skilled chart author. These charts are the source manifest for a declarative tool though, As such, individual helm charts are not going to be considered for this list. Rather, helm itself would be on this list as an application.
+Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned 'charts' that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying non-declaratively configured application. These charts are the source manifest for a declarative tool to apply the desired state against a Kubernetes cluster. As such, individual helm charts are not going to be considered for this list but rather, helm itself would be on this list as an application that facilitates declarative configuration.
 
 # The List
 
@@ -98,6 +96,8 @@ Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first
 - [Declarative configuration management](https://blog.nelhage.com/post/declarative-configuration-management/)
 - [Declarative Programming Opinion Article](https://www.toptal.com/software/declarative-programming)
 
-# Badges
+<!-- I've yet to earn this badge :) -->
+<!-- # Badges
 
 awesome-declarative-tools [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+-->

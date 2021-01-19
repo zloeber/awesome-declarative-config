@@ -38,6 +38,7 @@ entries:
   url: https://www.terraform.io/
   description: |-
     Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.
+
 - name: ferret
   type: application
   category: web scraping
@@ -45,18 +46,21 @@ entries:
   description: |-
     ferret is a web scraping system. It aims to simplify data extraction from the web for UI testing, machine learning, analytics and more.
     ferret allows users to focus on the data. It abstracts away the technical details and complexity of underlying technologies using its own declarative language. It is extremely portable, extensible, and fast.
+
 - name: mkdocs
   type: application
   category: website generator
   url: https://www.mkdocs.org/
   description: |-
     MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+
 - name: reagent
   type: application
   category: Testing
   url: https://github.com/whytheplatypus/reagent
   description: |-
     A cli and library for declaring what how an API is expected to behave and checking that hypothesis.
+
 - name: editly
   type: application
   category: Multimedia
@@ -64,12 +68,14 @@ entries:
   description: |-
     Editly is a tool and framework for declarative NLE (non-linear video editing) using Node.js and ffmpeg. Editly allows you to easily and programmatically create a video from a set of clips, images, audio and titles, with smooth transitions and music overlaid.
     Editly has a simple CLI for quickly assembling a video from a set of clips or images, or you can use its more flexible JavaScript API.
+
 - name: topicctl
   type: application
-  category: Streaming Database
+  category: Kafka
   url: https://github.com/segmentio/topicctl
   description: |-
     A tool for easy, declarative management of Kafka topics. Includes the ability to "apply" topic changes from YAML as well as a repl for interactive exploration of brokers, topics, consumer groups, messages, and more.
+
 - name: ignition
   type: application
   category: OS Runtime Configuration
