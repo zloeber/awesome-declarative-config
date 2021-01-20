@@ -1,8 +1,8 @@
 site_name: Awesome Declarative
 site_description: A curated list of awesome declarative applications and engines.
 site_author: Zachary Loeber
-repo_name: zloeber/awesome-declarative
-repo_url: https://www.github.com/zloeber/awesome-declarative
+repo_name: zloeber/awesome-declarative-config
+repo_url: https://www.github.com/zloeber/awesome-declarative-config
 markdown_extensions:
     - toc:
         permalink: True
@@ -32,6 +32,6 @@ extra:
       link: https://www.linkedin.com/in/zloeber
 nav:
   - Home: README.md
-  - The List: LIST.md
   - Contributing: CONTRIBUTING.md
   - Code of Conduct: CODE-OF-CONDUCT.md
+  - Development: DEVELOPMENT.md
