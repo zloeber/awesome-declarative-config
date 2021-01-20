@@ -81,7 +81,10 @@ Some applications that have broad industry support can be used as a means to ena
 
 # The List
 
-The list can be viewed [here](LIST.md) or the entire document can be viewed in its published form [here](https://zloeber.github.io/awesome-declarative-config/)
+The list can be viewed below. This document can be read online in its published form [here](https://zloeber.github.io/awesome-declarative-config/) as well.
+
+<!-- list1 -->
+<!-- /list1 -->
 
 # Contribute
 

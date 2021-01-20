@@ -8,7 +8,7 @@ APP_PATH:=$(ROOT_PATH)/.local/apps
 CONFIG_PATH:=$(ROOT_PATH)/config
 ENTRY_LIST?=$(ROOT_PATH)/list.yml
 ENTRY_TEST_LIST?=$(ROOT_PATH)/tests/test_list.yml
-ENTRY_SCHEMA?=$(CONFIG_PATH)/schemas/complex.cue
+ENTRY_SCHEMA?=$(CONFIG_PATH)/schemas/api.cue
 
 ## Output related vars
 ifdef TERM
