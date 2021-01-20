@@ -1,5 +1,6 @@
 package awesome_list
 
+// This is all just scratch work without any use or purpose as of yet...
 import (
     "strings"    
     "config/schemas/complex"

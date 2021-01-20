@@ -21,7 +21,6 @@ endif
 
 mkdocs := $(PYTHON_VENV_PATH)/bin/mkdocs
 cue := $(LOCAL_BIN_PATH)/cue
-pandoc := $(LOCAL_BIN_PATH)/pandoc
 mdtoc := $(LOCAL_BIN_PATH)/mdtoc
 
 .PHONY: help
@@ -62,7 +61,7 @@ show: ## Shows some settings
 	@echo "$(BOLD)ENTRY_SCHEMA$(RESET): $(ENTRY_SCHEMA)"
 
 .PHONY: deps
-deps: venv .dep/githubapps .dep/cue .dep/pandoc .dep/mdtoc ## install dependencies
+deps: venv .dep/githubapps .dep/cue .dep/mdtoc ## install dependencies
 
 .PHONY: .dep/githubapps
 .dep/githubapps: ## Install githubapp (ghr-installer)
@@ -104,11 +103,3 @@ venv:  ## Configure python virtual environment
 .PHONY: toc
 toc: .dep/mdtoc ## Update README.MD TOC
 	@$(LOCAL_BIN_PATH)/mdtoc -inplace README.md
-
-# .PHONY: diagrams
-# diagrams: ## Create diagrams with pandoc
-# 	$(LOCAL_BIN_PATH)/pandoc \
-# 		$(ROOT_PATH)/docs/img/declarative-diagram.md \
-# 		--to png \
-# 		-o $(ROOT_PATH)/docs/img/declarative-diagram.png \
-# 		--filter $(PYTHON_VENV_PATH)/bin/pandoc-mermaid

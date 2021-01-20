@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: AwesomeList
 spec:
-  name: "awesome-declarative"
-  groupBy: "category"
+  name: awesome-declarative
+  groupBy: type
   entries:
   - name: terraform
     type: engine
