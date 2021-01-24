@@ -6,9 +6,10 @@ PYTHON_VENV_PATH:=.venv
 LOCAL_BIN_PATH:=$(ROOT_PATH)/.local/bin
 APP_PATH:=$(ROOT_PATH)/.local/apps
 CONFIG_PATH:=$(ROOT_PATH)/config
+CUEMOD_PATH:=$(ROOT_PATH)/cue.mod
 ENTRY_LIST?=$(ROOT_PATH)/list.yml
 ENTRY_TEST_LIST?=$(ROOT_PATH)/tests/test_list.yml
-ENTRY_SCHEMA?=$(CONFIG_PATH)/schemas/api.cue
+ENTRY_SCHEMA?=$(CUEMOD_PATH)/pkg/schema.cue
 
 ## Output related vars
 ifdef TERM
@@ -43,7 +44,7 @@ publish: build ## Publish to github pages
 	$(mkdocs) gh-deploy --clean
 
 .PHONY: validate
-validate: ## Validate the $(ENTRY_LIST) file
+validate: ## Validate the list.yml file
 	@$(cue) vet $(ENTRY_LIST) $(ENTRY_SCHEMA)
 
 .PHONY: test/schema
