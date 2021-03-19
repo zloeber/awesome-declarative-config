@@ -32,6 +32,7 @@ extra:
       link: https://www.linkedin.com/in/zloeber
 nav:
   - Home: README.md
+  - List: LIST.md
   - Contributing: CONTRIBUTING.md
   - Code of Conduct: CODE-OF-CONDUCT.md
   - Development: DEVELOPMENT.md

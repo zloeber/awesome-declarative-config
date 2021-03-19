@@ -1,8 +1,13 @@
 apiVersion: v1
 kind: AwesomeList
 spec:
-  name: awesome-declarative
+  name: Awesome Declarative Apps
+  description: An awesome list of declarative applications, engines, and platforms.
   groupBy: type
+  types:
+    - 'engine'
+    - 'platform'
+    - 'application'
   entries:
   - name: terraform
     type: engine

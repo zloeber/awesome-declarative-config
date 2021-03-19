@@ -30,10 +30,12 @@ endif
 
 HOF_VERSION := 0.5.15
 CUE_VERSION := 0.3.0-beta.2
+GOMPLATE_VERSION := 3.9.0
 mkdocs := $(PYTHON_VENV_PATH)/bin/mkdocs
 cue := $(LOCAL_BIN_PATH)/cue
 mdtoc := $(LOCAL_BIN_PATH)/mdtoc
 hof := $(LOCAL_BIN_PATH)/hof
+gomplate := $(LOCAL_BIN_PATH)/gomplate
 
 .PHONY: help
 help: ## This help
@@ -51,19 +53,25 @@ validate: ## Validate the list.yml file
 test/schema: ## Validate the defined cue schema works as intended
 	@$(cue) vet $(ENTRY_TEST_LIST) $(ENTRY_SCHEMA)
 
+.PHONY: list
+list: ## Create awesome list markdown
+	$(gomplate) -d list.yml \
+	-f $(CONFIG_PATH)/templates/list_markdown.tpl > LIST.md
+
 .PHONY: link
 link: ## Link README.MD to docs folder
 	ln -sf $(ROOT_PATH)/README.md $(ROOT_PATH)/docs/README.md
 	ln -sf $(ROOT_PATH)/CONTRIBUTING.md $(ROOT_PATH)/docs/CONTRIBUTING.md
 	ln -sf $(ROOT_PATH)/CODE-OF-CONDUCT.md $(ROOT_PATH)/docs/CODE-OF-CONDUCT.md
 	ln -sf $(ROOT_PATH)/DEVELOPMENT.md $(ROOT_PATH)/docs/DEVELOPMENT.md
+	ln -sf $(ROOT_PATH)/LIST.md $(ROOT_PATH)/docs/LIST.md
 
 .PHONY: serve
 serve: link toc ## Run local webserver to preview the site
 	$(mkdocs) serve
 
 .PHONY: build
-build: link toc ## Build the site 
+build: list list/toc link toc ## Build the site 
 	@$(mkdocs) build
 
 .PHONY: show
@@ -73,7 +81,7 @@ show: ## Shows some settings
 	@echo "$(BOLD)ARCH$(RESET): $(ARCH)"
 
 .PHONY: deps
-deps: venv .dep/cue .dep/mdtoc .dep/hof ## install dependencies
+deps: venv .dep/cue .dep/mdtoc .dep/gomplate ## install dependencies
 
 # .PHONY: .dep/githubapps
 # .dep/githubapps: ## Install githubapp (ghr-installer)
@@ -109,6 +117,15 @@ ifeq (,$(wildcard $(hof)))
 endif
 	@echo "hof binary: $(hof)"
 
+.PHONY: .dep/gomplate
+.dep/gomplate: ## install gomplate
+ifeq (,$(wildcard $(gomplate)))
+	@mkdir -p /tmp/gomplate
+	@curl --retry 3 --retry-delay 5 --fail -sSL -o $(gomplate) https://github.com/hairyhenderson/gomplate/releases/download/v$(GOMPLATE_VERSION)/gomplate_$(OS)-$(ARCH)-slim
+	@chmod +x $(gomplate)
+endif
+	@echo "gomplate binary: $(gomplate)"
+
 .PHONY: venv
 venv:  ## Configure python virtual environment
 	@python3 -m venv $(PYTHON_VENV_PATH)
@@ -119,3 +136,7 @@ venv:  ## Configure python virtual environment
 .PHONY: toc
 toc: ## Update README.MD TOC
 	@$(LOCAL_BIN_PATH)/mdtoc -inplace README.md
+
+.PHONY: list/toc
+list/toc: ## Update README.MD TOC
+	@$(LOCAL_BIN_PATH)/mdtoc -inplace LIST.md

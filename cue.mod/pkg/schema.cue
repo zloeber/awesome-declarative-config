@@ -1,4 +1,4 @@
-package awesomelist
+package awesomelist_schema
 
 #Example: {
   name:     !=""

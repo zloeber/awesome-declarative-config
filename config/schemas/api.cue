@@ -24,7 +24,9 @@ package awesome_list
 apiVersion: "v1"
 kind:       "AwesomeList"
 spec: {
-  name:    !=""
+  name:        !=""
+  description: != ""
   groupBy: "category" | "type"
+  types: ...
   entries: [...#Entry]
 }
