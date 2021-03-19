@@ -359,20 +359,17 @@
 </li>
 </ol>
 <h2 id="declarative-manifests">Declarative Manifests<a class="headerlink" href="#declarative-manifests" title="Permanent link">&para;</a></h2>
-<p>The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria to be on this list;</p>
+<p>The crux of a declarative configuration file is the manifest used to actually declare desired state. The input for a declarative application, platform, or engine will be one or more declarative manifests that meet the following criteria to be on this list;</p>
 <ul>
 <li>Are human readable</li>
 <li>Follow a concrete configuration schema or language definition</li>
 <li>Present a reduction of overall complexity to the operator</li>
 </ul>
-<p>We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and (the ever loved/hated) yaml are perfectly valid declarative configuration formats on <a href="LIST/">this list</a>.</p>
+<p>We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and the ever loved/hated yaml are perfectly valid declarative configuration formats on <a href="LIST/">this list</a>.</p>
 <h2 id="what-does-not-qualify">What Does Not Qualify<a class="headerlink" href="#what-does-not-qualify" title="Permanent link">&para;</a></h2>
 <p>Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned &lsquo;charts&rsquo; that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying non-declaratively configured application. These charts are the source manifest for a declarative tool to apply the desired state against a Kubernetes cluster. As such, individual helm charts are not going to be considered for this list but rather, helm itself would be on this list as an application that facilitates declarative configuration.</p>
 <h1 id="the-list">The List<a class="headerlink" href="#the-list" title="Permanent link">&para;</a></h1>
-<p>The list can be viewed below. This document can be read online in its published form <a href="https://zloeber.github.io/awesome-declarative-config/">here</a> as well.</p>
-<!-- list1 -->
-<!-- /list1 -->
-
+<p>The list can be viewed <a href="LIST/">here</a> or be consumed in its published form <a href="https://zloeber.github.io/awesome-declarative-config/">here</a>.</p>
 <h1 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h1>
 <p>Contributions welcome! Read the <a href="CONTRIBUTING/">contribution guidelines</a> first.</p>
 <h1 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h1>
