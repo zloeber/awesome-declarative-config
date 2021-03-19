@@ -67,13 +67,13 @@ Three broad categories of software will be considered for this list. The differe
 
 ## Declarative Manifests
 
-The crux of a declarative configuration file is the manifest used to actually declare things. The input for a declarative application, platform, or engine will be one or more declarative manifests that meed the following criteria to be on this list;
+The crux of a declarative configuration file is the manifest used to actually declare desired state. The input for a declarative application, platform, or engine will be one or more declarative manifests that meet the following criteria to be on this list;
 
 * Are human readable
 * Follow a concrete configuration schema or language definition
 * Present a reduction of overall complexity to the operator
 
-We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and (the ever loved/hated) yaml are perfectly valid declarative configuration formats on [this list](LIST.md).
+We do not include dependency graphing or other more complex mechanisms as a requirement as it is perfectly plausible to meet the above criteria without advanced pathing/convergence techniques. The manifest format is not relevant either. They need only be human readable so that one can look at a manifest and understand what the end state will be if processed. This means toml, hcl, json, ini, cuelang, and the ever loved/hated yaml are perfectly valid declarative configuration formats on [this list](LIST.md).
 
 ## What Does Not Qualify
 
@@ -81,10 +81,7 @@ Some applications that have broad industry support can be used as a means to ena
 
 # The List
 
-The list can be viewed below. This document can be read online in its published form [here](https://zloeber.github.io/awesome-declarative-config/) as well.
-
-<!-- list1 -->
-<!-- /list1 -->
+The list can be viewed [here](LIST.md) or be consumed in its published form [here](https://zloeber.github.io/awesome-declarative-config/).
 
 # Contribute
 

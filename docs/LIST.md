@@ -1,1 +1,1 @@
-/home/zloeber/Projects/Personal/awesome-declarative-apps/LIST.md
+/home/zloeber/Projects/Personal/awesome-declarative-apps/LIST-mkdocs.md

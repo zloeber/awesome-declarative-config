@@ -3,18 +3,6 @@
 An awesome list of declarative applications, engines, and platforms.
 
 <!-- toc -->
-- [Type - Engine](#type---engine)
-  - [terraform](#terraform)
-  - [Cuelang](#cuelang)
-- [Type - Platform](#type---platform)
-  - [kubernetes](#kubernetes)
-- [Type - Application](#type---application)
-  - [ferret](#ferret)
-  - [mkdocs](#mkdocs)
-  - [reagent](#reagent)
-  - [editly](#editly)
-  - [topicctl](#topicctl)
-  - [ignition](#ignition)
 <!-- /toc -->
 
 

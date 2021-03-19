@@ -57,6 +57,8 @@ test/schema: ## Validate the defined cue schema works as intended
 list: ## Create awesome list markdown
 	$(gomplate) -d list.yml \
 	-f $(CONFIG_PATH)/templates/list_markdown.tpl > LIST.md
+	$(gomplate) -d list.yml \
+	-f $(CONFIG_PATH)/templates/list_markdown.tpl > LIST-mkdocs.md
 
 .PHONY: link
 link: ## Link README.MD to docs folder
@@ -64,7 +66,7 @@ link: ## Link README.MD to docs folder
 	ln -sf $(ROOT_PATH)/CONTRIBUTING.md $(ROOT_PATH)/docs/CONTRIBUTING.md
 	ln -sf $(ROOT_PATH)/CODE-OF-CONDUCT.md $(ROOT_PATH)/docs/CODE-OF-CONDUCT.md
 	ln -sf $(ROOT_PATH)/DEVELOPMENT.md $(ROOT_PATH)/docs/DEVELOPMENT.md
-	ln -sf $(ROOT_PATH)/LIST.md $(ROOT_PATH)/docs/LIST.md
+	ln -sf $(ROOT_PATH)/LIST-mkdocs.md $(ROOT_PATH)/docs/LIST.md
 
 .PHONY: serve
 serve: link toc ## Run local webserver to preview the site

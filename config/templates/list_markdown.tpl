@@ -22,7 +22,8 @@
 <details><summary>Examples</summary>
 {{ end }}
 <p>
-**{{ $example.name | strings.TrimSpace }}**
+
+Example {{ $index }} - {{ $example.name | strings.TrimSpace }}
 
 {{ $example.result }}
 
