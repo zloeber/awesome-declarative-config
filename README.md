@@ -87,7 +87,9 @@ The list can be viewed via Gitlab [here](https://github.com/zloeber/awesome-decl
 
 Contributions welcome! 
 
-The list itself is a singular YAML file (`list.yml`) that you can submit new contributions to quite easily. This one yaml file goes through some testing to ensure validity via [Culang](https://cuelang.org). After the hard tests have been passed, the entry itself will be reviewed and (hopefully) approved. The final merge will kick off a gomplate template merge with `list.yml` as the datasource.
+The list itself is a declarative YAML file, `list.yml`, that you can submit new contributions to quite easily. This one yaml file goes through some testing to ensure validity via [Culang](https://cuelang.org). After the hard tests have been passed, the entry itself will be go through the soft-test and (hopefully) approved. The final merge will kick off a gomplate template merge with `list.yml` as the datasource. 
+
+We then assemble the mkdocs files as defined in the declarative `mkdocs.yml` file and build the published site on github pages. Sub-pages for the mkdocs published version are soft-linked into the docs folder.
 
 > **NOTE** I put forth a bit of effort to generate the list via cuelang natively but was not able to effectively make that happen. Perhaps someone else can? (hint hint)
 
