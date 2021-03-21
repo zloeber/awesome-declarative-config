@@ -369,9 +369,14 @@
 <h2 id="what-does-not-qualify">What Does Not Qualify<a class="headerlink" href="#what-does-not-qualify" title="Permanent link">&para;</a></h2>
 <p>Some applications that have broad industry support can be used as a means to enable declarative declaration for any number of other applications. For example, a great deal of effort has gone into modernizing applications to run on Kubernetes via helm. These helm packages come in the form of versioned &lsquo;charts&rsquo; that can then be used by operators to express, in a declarative manner, a deployment of that application to the Kubernetes platform. These charts can mask an underlying non-declaratively configured application. These charts are the source manifest for a declarative tool to apply the desired state against a Kubernetes cluster. As such, individual helm charts are not going to be considered for this list but rather, helm itself would be on this list as an application that facilitates declarative configuration.</p>
 <h1 id="the-list">The List<a class="headerlink" href="#the-list" title="Permanent link">&para;</a></h1>
-<p>The list can be viewed <a href="LIST/">here</a> or be consumed in its published form <a href="https://zloeber.github.io/awesome-declarative-config/">here</a>.</p>
+<p>The list can be viewed via Gitlab <a href="https://github.com/zloeber/awesome-declarative-config/blob/main/LIST.md">here</a> or be consumed in its published form <a href="https://zloeber.github.io/awesome-declarative-config/">here</a>.</p>
 <h1 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h1>
-<p>Contributions welcome! Read the <a href="CONTRIBUTING/">contribution guidelines</a> first.</p>
+<p>Contributions welcome! </p>
+<p>The list itself is a singular YAML file (<code>list.yml</code>) that you can submit new contributions to quite easily. This one yaml file goes through some testing to ensure validity via <a href="https://cuelang.org">Culang</a>. After the hard tests have been passed, the entry itself will be reviewed and (hopefully) approved. The final merge will kick off a gomplate template merge with <code>list.yml</code> as the datasource.</p>
+<blockquote>
+<p><strong>NOTE</strong> I put forth a bit of effort to generate the list via cuelang natively but was not able to effectively make that happen. Perhaps someone else can? (hint hint)</p>
+</blockquote>
+<p>Read the <a href="CONTRIBUTING/">contribution guidelines</a> for more info and other guidelines for submitting change requests to this project.</p>
 <h1 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://mermaid-js.github.io/mermaid-live-editor">Mermaid.js online editor</a></li>
