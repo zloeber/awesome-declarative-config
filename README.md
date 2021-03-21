@@ -81,11 +81,17 @@ Some applications that have broad industry support can be used as a means to ena
 
 # The List
 
-The list can be viewed [here](LIST.md) or be consumed in its published form [here](https://zloeber.github.io/awesome-declarative-config/).
+The list can be viewed via Gitlab [here](https://github.com/zloeber/awesome-declarative-config/blob/main/LIST.md) or be consumed in its published form [here](https://zloeber.github.io/awesome-declarative-config/).
 
 # Contribute
 
-Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
+Contributions welcome! 
+
+The list itself is a singular YAML file (`list.yml`) that you can submit new contributions to quite easily. This one yaml file goes through some testing to ensure validity via [Culang](https://cuelang.org). After the hard tests have been passed, the entry itself will be reviewed and (hopefully) approved. The final merge will kick off a gomplate template merge with `list.yml` as the datasource.
+
+> **NOTE** I put forth a bit of effort to generate the list via cuelang natively but was not able to effectively make that happen. Perhaps someone else can? (hint hint)
+
+Read the [contribution guidelines](CONTRIBUTING.md) for more info and other guidelines for submitting change requests to this project.
 
 # Links
 
