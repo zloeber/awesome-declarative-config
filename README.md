@@ -81,7 +81,7 @@ Some applications that have broad industry support can be used as a means to ena
 
 # The List
 
-The list can be viewed via Gitlab [here](https://github.com/zloeber/awesome-declarative-config/blob/main/LIST.md) or be consumed in its published form [here](https://zloeber.github.io/awesome-declarative-config/).
+The list can be viewed via Github [here](https://github.com/zloeber/awesome-declarative-config/blob/main/LIST.md) or be consumed in its published form [here](https://zloeber.github.io/awesome-declarative-config/).
 
 # Contribute
 
