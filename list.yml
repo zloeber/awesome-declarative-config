@@ -108,3 +108,10 @@ spec:
         url: https://cuetorials.com/getting-help/#hofstadter-commercial-support-for-cue
       - description: Slack
         url: https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C
+
+  - name: cabourotte
+    type: application
+    category: Monitoring
+    url: https://github.com/mcorbin/cabourotte
+    description: |-
+      Cabourotte is a tool which allow you to execute healthchecks (HTTP(s), TCP, DNS, TLS) on your infrastructure.

@@ -81,7 +81,8 @@ show: ## Shows some settings
 	@echo "$(BOLD)ROOT_PATH$(RESET): $(ROOT_PATH)"
 	@echo "$(BOLD)OS$(RESET): $(OS)"
 	@echo "$(BOLD)ARCH$(RESET): $(ARCH)"
-
+	@echo "$(BOLD)ENTRY_SCHEMA$(RESET): $(ENTRY_SCHEMA)"
+	
 .PHONY: deps
 deps: venv .dep/cue .dep/mdtoc .dep/gomplate ## install dependencies
 

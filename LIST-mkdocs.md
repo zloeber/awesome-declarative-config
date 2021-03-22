@@ -34,6 +34,7 @@ An awesome list of declarative applications, engines, and platforms.
 
 
 
+
 # Type - Platform
 
 
@@ -79,6 +80,7 @@ spec:
 </p>
 
 </details>
+
 
 
 
@@ -150,5 +152,14 @@ Editly has a simple CLI for quickly assembling a video from a set of clips or im
 **Description:** Ignition is a low-level system configuration utility. The Ignition executable is part of the temporary initial root filesystem, the initramfs. When Ignition runs, it finds configuration data in a named location for a given environment, such as a file or URL, and applies it to the machine before switch_root is called to pivot to the machine's root filesystem.
 Ignition uses a JSON configuration file to represent the set of changes to be made.
 
+
+
+## cabourotte
+
+**Category:** Monitoring
+
+**Url:** https://github.com/mcorbin/cabourotte
+
+**Description:** Cabourotte is a tool which allow you to execute healthchecks (HTTP(s), TCP, DNS, TLS) on your infrastructure.
 
 
