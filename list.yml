@@ -10,6 +10,7 @@ spec:
     - 'application'
   entries:
   - name: terraform
+    title: Declarative infrastructure and provisioning tool
     type: engine
     category: infrastructure as code
     url: https://www.terraform.io/
@@ -17,13 +18,14 @@ spec:
       Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.
 
   - name: kubernetes
+    title: Container orchestration
     type: platform
     category: container orchestration
     url: https://kubernetes.io/
     description: |-
       Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
     examples:
-      - name: Basic Deployment 
+      - name: Basic Deployment
         manifest: |-	
           apiVersion: apps/v1
           kind: Deployment
@@ -50,6 +52,7 @@ spec:
           A replica set of 3 pods will be deployed to Kubernetes. Each pod will run the nginx:1.7.9 container image exposing port 80 and be labeled with `app:nginx` for use in service abstraction.
 
   - name: ferret
+    title: 'Web scraper'
     type: application
     category: web scraping
     url: https://github.com/MontFerret/ferret
@@ -58,6 +61,7 @@ spec:
       ferret allows users to focus on the data. It abstracts away the technical details and complexity of underlying technologies using its own declarative language. It is extremely portable, extensible, and fast.
 
   - name: mkdocs
+    title: 'Static website generator'
     type: application
     category: website generator
     url: https://www.mkdocs.org/
@@ -65,6 +69,7 @@ spec:
       MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 
   - name: reagent
+    title: 'API validation'
     type: application
     category: Testing
     url: https://github.com/whytheplatypus/reagent
@@ -72,6 +77,7 @@ spec:
       A cli and library for declaring what how an API is expected to behave and checking that hypothesis.
 
   - name: editly
+    title: 'Create a video from a set of clips, images, audio and titles, with smooth transitions and music overlaid.'
     type: application
     category: Multimedia
     url: https://github.com/mifi/editly
@@ -80,6 +86,7 @@ spec:
       Editly has a simple CLI for quickly assembling a video from a set of clips or images, or you can use its more flexible JavaScript API.
 
   - name: topicctl
+    title: 'Declarative kafka topic management'
     type: application
     category: Kafka
     url: https://github.com/segmentio/topicctl
@@ -87,6 +94,7 @@ spec:
       A tool for easy, declarative management of Kafka topics. Includes the ability to "apply" topic changes from YAML as well as a repl for interactive exploration of brokers, topics, consumer groups, messages, and more.
 
   - name: ignition
+    title: 'OS Runtime Configuration'
     type: application
     category: OS Runtime Configuration
     url: https://github.com/kinvolk/ignition
@@ -95,6 +103,7 @@ spec:
       Ignition uses a JSON configuration file to represent the set of changes to be made.
 
   - name: Cuelang
+    title: 'Configure, unify, execute'
     type: engine
     category: Configuration Runtime
     url: https://cuelang.org
@@ -110,6 +119,7 @@ spec:
         url: https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C
 
   - name: cabourotte
+    title: 'Declarative infrastructure health checks'
     type: application
     category: Monitoring
     url: https://github.com/mcorbin/cabourotte

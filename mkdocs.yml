@@ -17,6 +17,8 @@ extra_css:
   - https://unpkg.com/mermaid@8.8.4/dist/mermaid.css
 extra_javascript:
   - https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
 theme:
   name: material
   palette:

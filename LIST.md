@@ -3,6 +3,7 @@
 An awesome list of declarative applications, engines, and platforms.
 
 <!-- toc -->
+- [Summary](#summary)
 - [Type - Engine](#type---engine)
   - [terraform](#terraform)
   - [Cuelang](#cuelang)
@@ -17,6 +18,23 @@ An awesome list of declarative applications, engines, and platforms.
   - [ignition](#ignition)
   - [cabourotte](#cabourotte)
 <!-- /toc -->
+
+
+# Summary
+
+| Name | Type | Category | Title |
+| ------ | ------ | ------ | ------ |
+| [terraform](#terraform) | Engine | Infrastructure As Code | Declarative Infrastructure And Provisioning Tool |
+| [kubernetes](#kubernetes) | Platform | Container Orchestration | Container Orchestration |
+| [ferret](#ferret) | Application | Web Scraping | Web Scraper |
+| [mkdocs](#mkdocs) | Application | Website Generator | Static Website Generator |
+| [reagent](#reagent) | Application | Testing | API Validation |
+| [editly](#editly) | Application | Multimedia | Create A Video From A Set Of Clips, Images, Audio And Titles, With Smooth Transitions And Music Overlaid. |
+| [topicctl](#topicctl) | Application | Kafka | Declarative Kafka Topic Management |
+| [ignition](#ignition) | Application | OS Runtime Configuration | OS Runtime Configuration |
+| [Cuelang](#Cuelang) | Engine | Configuration Runtime | Configure, Unify, Execute |
+| [cabourotte](#cabourotte) | Application | Monitoring | Declarative Infrastructure Health Checks |
+
 
 
 # Type - Engine
