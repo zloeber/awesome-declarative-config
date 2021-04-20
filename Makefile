@@ -67,6 +67,7 @@ link: ## Link README.MD to docs folder
 	ln -sf $(ROOT_PATH)/CODE-OF-CONDUCT.md $(ROOT_PATH)/docs/CODE-OF-CONDUCT.md
 	ln -sf $(ROOT_PATH)/DEVELOPMENT.md $(ROOT_PATH)/docs/DEVELOPMENT.md
 	ln -sf $(ROOT_PATH)/LIST-mkdocs.md $(ROOT_PATH)/docs/LIST.md
+	ln -sf $(ROOT_PATH)/LIST-mkdocs.md $(ROOT_PATH)/docs/LIST.md
 
 .PHONY: serve
 serve: link toc ## Run local webserver to preview the site
